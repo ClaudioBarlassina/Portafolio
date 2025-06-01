@@ -1,0 +1,26 @@
+@media (max-width:570px) {
+    .navbar{
+        height: 40px;
+    }
+    .navbar-links{
+        display: none
+    }
+    .icono-hambur{
+        display: flex;
+        margin-right: 20px;
+    }
+    .navbar-cont-desplegable{
+       position: absolute;
+       top: 60px;
+       left: 100%;
+       display: flex;
+       background-color: rgb(54, 42, 165);
+       width: 150px;
+       height: 100vh;
+       transition: left 1s ease-in-out;
+    }
+    .navbar-cont-desplegable.open{
+        left: 70%;
+    }
+    
+}

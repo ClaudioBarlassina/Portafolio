@@ -1,0 +1,32 @@
+.card-conteiner{
+display: flex;
+flex-direction: row;
+gap: 50px;
+margin: 30px;
+}
+.img-card{
+    width: auto; 
+    height: 300px;
+    border-radius: 20px;
+}
+.info{
+    display: block;
+    
+   
+
+    h1{
+        color: rgb(184, 113, 20);
+    }
+    p{
+        font-size: 20px;
+    }
+}
+.iconos{
+    display: flex;
+    img{
+        width: auto;
+        height: 50px;
+        filter: invert();
+    }
+
+}
