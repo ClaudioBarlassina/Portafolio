@@ -1,21 +1,19 @@
 import React from 'react'
-import Navbar from "../Components/Navbar"
-import Hero from "../Components/Hero"
-import About from "../Components/About"
+import Navbar from '../Components/Navbar'
+import Hero from '../Components/Hero'
+import About from '../Components/About'
 import Proyects from '../Components/Proyects'
-import Contacts from "../Components/Contacts"
-
+import Contacts from '../Components/Contacts'
 
 const Home = () => {
   return (
     <div>
-       <Navbar></Navbar>
+      <Navbar></Navbar>
       <Hero></Hero>
-      {/* <AutoPlay></AutoPlay> */}
-      <About></About>
-      <Proyects></Proyects> 
-      <Contacts></Contacts>
 
+      <About></About>
+      <Proyects></Proyects>
+      <Contacts></Contacts>
     </div>
   )
 }

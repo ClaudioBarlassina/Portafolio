@@ -2,16 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
+  
   margin: 0;
   font-family: 'Roboto';
   background-color: black;
   color: #e0e0e0;
+
+  
 }
 
 /* Navbar */
 .navbar {
   position: fixed;
   width: 100%;
+
+
   background-color: #1f1f1f;
   display: flex;
   justify-content: space-between;
@@ -20,6 +25,7 @@ body {
   height: 40px;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
 }
 .icono-hambur {
   display: none;
@@ -118,7 +124,6 @@ section {
 .fondo5 {
   display: flex;
   width: 120%;
-
   position: absolute;
   z-index: -2;
 }

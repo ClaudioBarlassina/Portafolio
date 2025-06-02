@@ -1,26 +1,88 @@
-@media (max-width:570px) {
-    .navbar{
-        height: 40px;
-    }
-    .navbar-links{
-        display: none
-    }
-    .icono-hambur{
-        display: flex;
-        margin-right: 20px;
-    }
-    .navbar-cont-desplegable{
-       position: absolute;
-       top: 60px;
-       left: 100%;
-       display: flex;
-       background-color: rgb(54, 42, 165);
-       width: 150px;
-       height: 100vh;
-       transition: left 1s ease-in-out;
-    }
-    .navbar-cont-desplegable.open{
-        left: 70%;
-    }
-    
+@media (max-width: 545px) {
+  /* 1. Navbar */
+  .navbar {
+    padding: 10px;
+    height: 50px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .navbar-links {
+    display: none;
+  }
+
+  .icono-hambur {
+    display: flex;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  /* 2. Menú desplegable (hamburguesa) */
+  .navbar-cont-desplegable {
+    position: fixed;
+    top: 50px;
+    right: -100%; /* oculto por defecto */
+    display: flex;
+    flex-direction: column;
+    background-color: #1f1f1f;
+    width: 70%;
+    height: 100vh;
+    padding: 20px;
+    transition: right 0.3s ease-in-out;
+    z-index: 999;
+  }
+
+  .navbar-cont-desplegable.open {
+    right: 0;
+  }
+
+  /* 3. Hero section */
+  .hero {
+    flex-direction: column;
+    padding: 4rem 1rem;
+  }
+
+  .imagen-hero {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+  }
+
+  /* 4. Fondo roto */
+  .fondo5 {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  /* 5. About section */
+  .secc-about {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about-sec1,
+  .about-sec2 {
+    width: 100%;
+  }
+
+  /* 6. Contact section */
+  .conteiner-contacto {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .parrafo {
+    width: 100%;
+  }
+
+  /* 7. Prevención general de desborde */
+  html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
 }

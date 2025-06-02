@@ -30,3 +30,12 @@ margin: 30px;
     }
 
 }
+@media (max-width:570px) {
+    .card-conteiner{
+        display: flex;
+        flex-direction: column;
+    }
+    .img-card{
+    width: auto; 
+    height: 200px;}
+}
