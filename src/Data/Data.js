@@ -1,8 +1,8 @@
 const data = [
   {
     id: 1,
-    img: '../src/assets/miniatura-Star.png',
-    img2: '../src/assets/miniatura-Star2.png',
+    img: './miniatura-Star.png',
+    // img2: '../src/assets/miniatura-Star2.png',
     nombre: 'Tienda Online',
     descripcion:
       'E-commerce Star-Accesorios para moviles desarrollado con React y Supabase para la gestión de productos y pedidos recibidos, carrito de compras Redux.',
@@ -16,7 +16,7 @@ Ideal para emprendimientos que buscan una solución completa, moderna y fácil d
   },
   {
     id: 2,
-    img: '../src/assets/miniatura-Burger.png',
+    img: './miniatura-Burger.png',
     nombre: 'Landing Page Corporativa',
     descripcion:
       'Sitio web responsive para una empresa ficticia llamada BURGER, construido con HTML, CSS y animaciones usando AOS',
