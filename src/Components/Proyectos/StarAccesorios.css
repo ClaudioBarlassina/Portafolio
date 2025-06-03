@@ -165,6 +165,10 @@
  .formatoCentral{
   display: flex;
   flex-direction: column;
+  a{
+    display: flex;
+    align-items: center;
+  }
  }
  .imagen-final{
   width: 70%;
@@ -177,7 +181,5 @@
   width: 100%;
    text-align: center;
  }
- .iconosweb-star{
  
- }
 }
