@@ -27,6 +27,11 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 
 }
+.logoCB{
+  width: 120px;
+}
+
+
 .icono-hambur {
   display: none;
 }

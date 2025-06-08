@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { GiHamburgerMenu } from "react-icons/gi";
-
+import logoCB from "../../public/logoCB1.png"
 const Navbar = () => {
 
   const [isOpen, setOpen ] = useState(false)
@@ -17,7 +17,7 @@ function handlerOpen () {
   return (
     <div>
       <nav className="navbar" data-aos="flip-up">
-        <div className="navbar-logo"></div>
+        <div className="navbar-logo"><img src={logoCB} alt="" className='logoCB' /></div>
         <div className='icono-hambur'>
 
         <GiHamburgerMenu onClick={handlerOpen}/>
