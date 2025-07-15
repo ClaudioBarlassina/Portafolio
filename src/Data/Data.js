@@ -1,6 +1,25 @@
 const data = [
   {
-    id: 1,
+   
+  id: 1,
+  img: './miniaturaHooksy.png',
+  nombre: 'Hooksy',
+  descripcion:
+    'Sitio de servicios para el desarrollo de tiendas eCommerce personalizadas. Construido con React.js y desplegado con Vercel.',
+  descripcionLarga: `Hooksy es un sitio web orientado a ofrecer servicios de desarrollo de tiendas eCommerce personalizadas. 
+Diseñado y desarrollado íntegramente con React.js y CSS, el sitio presenta una interfaz moderna y responsiva que comunica de forma clara los servicios ofrecidos.
+
+Cuenta con planes escalables pensados para distintos tipos de clientes, desde pequeños emprendimientos hasta negocios en crecimiento. 
+Incluye integración directa con WhatsApp para facilitar la comunicación con potenciales clientes, y una estructura pensada para mejorar la conversión y la experiencia del usuario.
+
+El despliegue se realizó con Vercel, asegurando una carga rápida y disponibilidad constante en producción.`,
+  url: 'https://hooksy-seven.vercel.app/', 
+  git: 'https://github.com/ClaudioBarlassina/Hooksy', // Reemplazar si el repo es público
+
+
+  },
+  {
+    id: 2,
     img: './miniatura-Star.png',
     // img2: '../src/assets/miniatura-Star2.png',
     nombre: 'Tienda Online',
@@ -15,7 +34,7 @@ Ideal para emprendimientos que buscan una solución completa, moderna y fácil d
     
   },
   {
-    id: 2,
+    id: 3,
     img: './miniatura-Burger.png',
     nombre: 'Landing Page Corporativa',
     descripcion:
