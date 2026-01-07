@@ -35,4 +35,4 @@ escalables y orientadas a la experiencia de usuario.
 ## 📬 Contacto
 
 - GitHub: https://github.com/ClaudioBarlassina
-- LinkedIn: (link)
+- LinkedIn: https://www.linkedin.com/in/claudiobarlassina/
