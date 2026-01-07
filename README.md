@@ -3,7 +3,7 @@
 Portafolio personal donde presento proyectos desarrollados como
 Full-Stack Web Developer.
 
-🔗 Live: portafolio-71sj.vercel.app
+🔗 Live: https://portafolio-71sj.vercel.app/
 
 ---
 
