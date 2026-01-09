@@ -61,9 +61,9 @@ const About = () => {
             <div className="empresa" data-aos="fade-up" data-aos-delay="200">
               <img src={Reactjs} alt="" />
             </div>
-            <div className="empresa" data-aos="fade-up" data-aos-delay="300">
+            {/* <div className="empresa" data-aos="fade-up" data-aos-delay="300">
               <img src={Reduxjs} alt="" />
-            </div>
+            </div> */}
             <div className="empresa" data-aos="fade-up" data-aos-delay="400">
               <img src={html5} alt="" />
             </div>

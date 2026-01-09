@@ -31,7 +31,7 @@ function App() {
    
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
-        <Route path='/Details/:id' element={<Details></Details>}></Route>
+        
       </Routes>
 
  

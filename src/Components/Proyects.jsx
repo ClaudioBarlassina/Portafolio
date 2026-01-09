@@ -19,7 +19,9 @@ const Proyects = () => {
             id={item.id}
             img={item.img}
             nombre={item.nombre}
-            descripcion={item.descripcion}
+            tecnologias={item.tecnologias}
+            Funcionalidades={item.Funcionalidades}
+            descripcion={item.descripcionLarga}
             git={item.git}
             url={item.url}
           ></Card>
