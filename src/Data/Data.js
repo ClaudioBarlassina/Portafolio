@@ -2,7 +2,7 @@ const data = [
   {
    
   id: 1,
-  img: 'src/assets/Star-Accesorios.png',
+  img: '/Star-Accesorios.png',
   nombre: 'Star-Accesorios | eCommerce',
   descripcion:'Ecommerce web desarrollado como proyecto realizado, enfocado en una experiencia de usuario simple, rápida y responsive.',
   descripcionLarga: `Ecommerce completo desarrollado desde cero.
