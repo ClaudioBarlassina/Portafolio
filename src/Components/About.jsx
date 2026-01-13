@@ -10,50 +10,60 @@ import Reactjs from '../assets/React.png'
 import Reduxjs from '../assets/Redux.png'
 import Supabase from '../assets/Supabase.png'
 import vercel from '../assets/vercel.png'
+import { useStore } from '../../Zustand/store'
 const About = () => {
+
+  const {t} = useStore()
+
   return (
     <div>
       <section id="about" className="about  "data-aos="fade-up">
         <div className="presen">
           <img src={fondo2} alt="" />
           <h2 data-aos="fade-up" data-aos-delay="200">
-            Sobre mí
+            {/* Sobre mí */}
+            {t.about.title}
           </h2>
           <p data-aos="fade-up" data-aos-delay="200">
-            Aquí encontrarás más información sobre mí, lo que hago y mis
+            {/* Aquí encontrarás más información sobre mí, lo que hago y mis
             habilidades actuales principalmente en términos de programación y
-            tecnología.
+            tecnología. */}
+            {t.about.intro}
           </p>
         </div>
         <div className="secc-about">
           <div className="about-sec1">
-            <h1 data-aos="zoom-in" data-aos-delay="200">Conoceme!</h1>
+            <h1 data-aos="zoom-in" data-aos-delay="200">{t.about.subtitle}</h1>
             <div className="conoceme-about">
               <p data-aos="fade-right" data-aos-delay="200" >
-                Soy Desarrollador Web Full-Stack con experiencia en la creación
+                {/* Soy Desarrollador Web Full-Stack con experiencia en la creación
                 y gestión del frontend de sitios y aplicaciones web, enfocado en
                 contribuir al éxito del producto final mediante soluciones
-                funcionales, accesibles y atractivas.{' '}
+                funcionales, accesibles y atractivas.{' '} */}
+                {t.about.description1}
               </p>
 
               <p  data-aos="fade-right" data-aos-delay="300">
-                En mis tiempos libres, me dedico a perfeccionar mis habilidades
+                {/* En mis tiempos libres, me dedico a perfeccionar mis habilidades
                 aprendiendo las últimas tecnologías y desarrollando aplicaciones
-                orientadas a resolver necesidades reales.
+                orientadas a resolver necesidades reales. */}
+                {t.about.description2}
               </p>
 
               <p  data-aos="fade-right" data-aos-delay="400">
-                Podés consultar algunos de mis trabajos en la sección Proyectos.
+                {/* Podés consultar algunos de mis trabajos en la sección Proyectos. */}
+                {t.about.description3}
               </p>
 
               <p  data-aos="fade-right" data-aos-delay="500">
                 {' '}
-                Estoy abierto a oportunidades laborales donde pueda aportar
+                {/* Estoy abierto a oportunidades laborales donde pueda aportar
                 valor, seguir creciendo profesionalmente y formar parte de
                 equipos que compartan la pasión por la tecnología y la
-                innovación.
+                innovación. */}
+                {t.about.opportunities}
               </p>
-              <a href="#contact" data-aos="zoom-in" data-aos-delay="700" className='enlases'> CONTACTO</a>
+              <a href="#contact" data-aos="zoom-in" data-aos-delay="700" className='enlases'> {t.about.ctaContact}</a>
               {/* <button  data-aos="flip-left" data-aos-delay="700" onClick="#contact" className='enlases'>CONTACTO</button> */}
             </div>
           </div>

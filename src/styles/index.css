@@ -42,6 +42,22 @@ body {
   color: #64ffda;
   margin-right: 20px;
 }
+.navbar-button-lang{
+ border-radius: 100%;
+
+
+border:none
+ 
+}
+.navbar-button-lang img{
+
+width: 30px;
+
+
+
+ 
+}
+
 
 .navbar-links {
   list-style: none;

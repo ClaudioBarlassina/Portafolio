@@ -1,16 +1,18 @@
 import data from '../Data/Data.js'
 import Card from './Card'
 import fondo5 from "../assets/fondo5.png"
+import { useStore } from '../../Zustand/store.js'
 
 const Proyects = () => {
 
+  const {t} = useStore()
 
   {console.log(data)}
   return (
     <div id="projects">
       <section className="projects" data-aos="fade-up">
         <img src={fondo5} alt="" className='fondo5' data-aos="zoom-up"  data-aos-delay="800"/>
-        <h2  data-aos="fade-up"  data-aos-delay="100">Proyectos</h2>
+        <h2  data-aos="fade-up"  data-aos-delay="100">{t.projects.title}</h2>
         <div className='projects-card' data-aos="fade-up"  data-aos-delay="400" >
 
         {data.map((item) => (

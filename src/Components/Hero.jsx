@@ -1,18 +1,24 @@
 import React from 'react'
 import fondo from '../assets/fondo.jpg'
 import { Typewriter } from 'react-simple-typewriter'
+import { useStore } from '../../Zustand/store';
 
 const Hero = () => {
+const { t} =useStore()
+
+
   return (
-    <div>
+    <div> 
+      
       <section id="hero" className="hero">
         <div className="cont-pri">
           <h2 data-aos="zoom-in" data-aos-delay="400">
-            Hola, Soy Claudio Barlassina
+            {/* Hola, Soy Claudio Barlassina */}
+            {t.home.title}
           </h2>
           <h1>
             <Typewriter
-              words={['Desarrollador Web']}
+              words={[t.home.subtitle]}
               // loop={true}
               cursor
               cursorStyle="|"
@@ -23,13 +29,15 @@ const Hero = () => {
           </h1>
 
           <p data-aos="zoom-in" data-aos-delay="800">
-            Un desarrollador web orientado a resultados que crea y administra
+            {/* Un desarrollador web orientado a resultados que crea y administra
             sitios web y aplicaciones web que conducen al éxito del producto
-            general.
+            general. */}
+            {t.home.description}
           </p>
           <a href="#projects" className="enlases" data-aos="zoom-in"
           data-aos-delay="900">
-            PROYECTOS
+            {/* PROYECTOS */}
+            {t.home.button}
           </a>
         </div>
 
