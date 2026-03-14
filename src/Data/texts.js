@@ -1,7 +1,7 @@
 export const texts = {
   en: {
     navbar: {
-        home:"Home",
+      home: 'Home',
       projects: 'Proyects',
       about: 'About',
       contact: 'Contact',
@@ -37,15 +37,19 @@ export const texts = {
       ctaContact: 'Contact',
     },
     projects: {
-        title: 'Projects',
+      title: 'Projects',
       1: {
         ecommerce: {
           title: 'Star-Accesorios | eCommerce',
           description:
             'A full eCommerce application developed from scratch. It includes a complete shopping flow, cart management, and global state handling, with a Supabase backend for data persistence. The project focuses on best practices, performance optimization, and a mobile-first user experience.',
           techTitle: 'Tech Stack',
+          label: 'Proyect client',
+          image: 'miniaturaStar.png',
           tech: ['React', 'Vite', 'CSS', 'Supabase', 'Zustand'],
           featuresTitle: 'Key Features',
+           demo: 'https://ecommerce-star-six.vercel.app/',
+          github: 'https://github.com/ClaudioBarlassina',
           features: [
             'Product catalog',
             'Product filtering',
@@ -54,6 +58,7 @@ export const texts = {
             'Global state management with Zustand',
             'Mobile-first responsive design',
             'Deployed to production',
+            "Supabase database",
           ],
         },
       },
@@ -61,7 +66,7 @@ export const texts = {
   },
   es: {
     navbar: {
-         home:"Inicio",
+      home: 'Inicio',
       projects: 'Proyectos',
       about: 'Sobre mí',
       contact: 'Contacto',
@@ -100,15 +105,19 @@ export const texts = {
     },
 
     projects: {
-        title: 'Proyectos',
+      title: 'Proyectos',
       1: {
         ecommerce: {
           title: 'Star-Accesorios | eCommerce',
           description:
             'Aplicación eCommerce completa desarrollada desde cero. Incluye un flujo de compra completo, manejo del carrito y estado global, con un backend en Supabase para la persistencia de datos. El proyecto está enfocado en buenas prácticas, optimización de rendimiento y una experiencia mobile-first.',
+          image: 'miniaturaStar.png',
           techTitle: 'Tecnologías',
+          label: 'Proyecto de cliente',
           tech: ['React', 'Vite', 'CSS', 'Supabase', 'Zustand'],
           featuresTitle: 'Funcionalidades',
+          demo: 'https://ecommerce-star-six.vercel.app/',
+          github: 'https://github.com/ClaudioBarlassina',
           features: [
             'Catálogo de productos',
             'Filtrado de productos',
@@ -117,6 +126,7 @@ export const texts = {
             'Manejo de estado global con Zustand',
             'Diseño responsive mobile-first',
             'Aplicación desplegada en producción',
+            "Base de datos en Supabase",
           ],
         },
       },

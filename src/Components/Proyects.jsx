@@ -1,5 +1,5 @@
-import data from '../Data/Data.js'
-import Card from './Card'
+import ProjectCard from './ProjectCard.jsx'
+
 import fondo5 from "../assets/fondo5.png"
 import { useStore } from '../../Zustand/store.js'
 
@@ -7,7 +7,7 @@ const Proyects = () => {
 
   const {t} = useStore()
 
-  {console.log(data)}
+  {console.log(t)}
   return (
     <div id="projects">
       <section className="projects" data-aos="fade-up">
@@ -15,19 +15,9 @@ const Proyects = () => {
         <h2  data-aos="fade-up"  data-aos-delay="100">{t.projects.title}</h2>
         <div className='projects-card' data-aos="fade-up"  data-aos-delay="400" >
 
-        {data.map((item) => (
-          <Card
-            key={item.id}
-            id={item.id}
-            img={item.img}
-            nombre={item.nombre}
-            tecnologias={item.tecnologias}
-            Funcionalidades={item.Funcionalidades}
-            descripcion={item.descripcionLarga}
-            git={item.git}
-            url={item.url}
-          ></Card>
-        ))}
+     {console.log(t.projects[1].ecommerce)}
+         
+      <ProjectCard project={t.projects[1].ecommerce}></ProjectCard>
         </div>
       </section>
     </div>
