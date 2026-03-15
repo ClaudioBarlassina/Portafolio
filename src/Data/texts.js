@@ -62,6 +62,49 @@ export const texts = {
           ],
         },
       },
+      2: {
+  moduCommerce: {
+    title: "Full Stack eCommerce Demo",
+
+    label: "Demo Project",
+
+    description:
+      "ModuCommerce is a full stack eCommerce platform built with a decoupled architecture between frontend and backend. The frontend communicates exclusively with a custom API built using Express, allowing flexible integration across different projects. All system components were designed as reusable, fully responsive and self-contained modules, making them easy to adapt to different applications or project structures.",
+
+    image: "miniaturaEcom.png",
+
+    techTitle: "Technologies",
+
+    tech: [
+      "React",
+      "Vite",
+      "Zustand",
+      "Express",
+      "Node.js",
+      "Nodemailer",
+      "CSS"
+    ],
+
+    featuresTitle: "Features",
+
+    demo: "",
+    github: "https://github.com/ClaudioBarlassina",
+
+    features: [
+      "Decoupled Frontend and Backend architecture",
+      "REST API built with Express",
+      "Reusable components designed for multiple projects",
+      "Fully responsive components",
+      "Product filtering by category, brand and price",
+      "Product search by name",
+      "Automatic pagination (10 products per page)",
+      "Shopping cart with persistence",
+      "Custom simulated payment gateway",
+      "Email sending with Nodemailer",
+      "Global state management using Zustand"
+    ]
+  }
+}
     },
   },
   es: {
@@ -130,6 +173,49 @@ export const texts = {
           ],
         },
       },
+      2: {
+  moduCommerce: {
+    title: "Full Stack eCommerce Demo",
+
+    label: "Proyecto demo",
+
+    description:
+      "ModuCommerce es una plataforma eCommerce full stack desarrollada con una arquitectura desacoplada entre frontend y backend. El frontend consume exclusivamente una API creada con Express, permitiendo una integración flexible en diferentes proyectos. Todos los componentes del sistema fueron diseñados como componentes reutilizables, completamente responsive y automáticos, capaces de adaptarse fácilmente a distintos proyectos o estructuras de aplicación.",
+
+    image: "miniaturaEcom.png",
+
+    techTitle: "Tecnologías",
+
+    tech: [
+      "React",
+      "Vite",
+      "Zustand",
+      "Express",
+      "Node.js",
+      "Nodemailer",
+      "CSS"
+    ],
+
+    featuresTitle: "Funcionalidades",
+
+    demo: "",
+    github: "https://github.com/ClaudioBarlassina",
+
+    features: [
+      "Arquitectura Frontend y Backend desacoplada",
+      "API REST construida con Express",
+      "Componentes reutilizables diseñados para múltiples proyectos",
+      "Componentes completamente responsive",
+      "Sistema de filtros por categoría, marca y precio",
+      "Búsqueda de productos por nombre",
+      "Paginación automática (10 productos por página)",
+      "Carrito de compras con persistencia",
+      "Simulación de pasarela de pago propia",
+      "Envío de correos con Nodemailer",
+      "Gestión de estado global con Zustand"
+    ]
+  }
+}
     },
   },
 }

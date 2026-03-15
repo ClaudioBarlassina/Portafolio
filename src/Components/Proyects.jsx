@@ -18,6 +18,7 @@ const Proyects = () => {
      {console.log(t.projects[1].ecommerce)}
          
       <ProjectCard project={t.projects[1].ecommerce}></ProjectCard>
+       <ProjectCard project={t.projects[2].moduCommerce}></ProjectCard>
         </div>
       </section>
     </div>
