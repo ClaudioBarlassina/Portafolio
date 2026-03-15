@@ -69,7 +69,7 @@ export const texts = {
     label: "Demo Project",
 
     description:
-      "ModuCommerce is a full stack eCommerce platform built with a decoupled architecture between frontend and backend. The frontend communicates exclusively with a custom API built using Express, allowing flexible integration across different projects. All system components were designed as reusable, fully responsive and self-contained modules, making them easy to adapt to different applications or project structures.",
+      "Full Stack eCommerce Demo is a full stack eCommerce platform built with a decoupled architecture between frontend and backend. The frontend communicates exclusively with a custom API built using Express, allowing flexible integration across different projects. All system components were designed as reusable, fully responsive and self-contained modules, making them easy to adapt to different applications or project structures.",
 
     image: "miniaturaEcom.png",
 
@@ -180,7 +180,7 @@ export const texts = {
     label: "Proyecto demo",
 
     description:
-      "ModuCommerce es una plataforma eCommerce full stack desarrollada con una arquitectura desacoplada entre frontend y backend. El frontend consume exclusivamente una API creada con Express, permitiendo una integración flexible en diferentes proyectos. Todos los componentes del sistema fueron diseñados como componentes reutilizables, completamente responsive y automáticos, capaces de adaptarse fácilmente a distintos proyectos o estructuras de aplicación.",
+      "Full Stack eCommerce Demo es una plataforma eCommerce full stack desarrollada con una arquitectura desacoplada entre frontend y backend. El frontend consume exclusivamente una API creada con Express, permitiendo una integración flexible en diferentes proyectos. Todos los componentes del sistema fueron diseñados como componentes reutilizables, completamente responsive y automáticos, capaces de adaptarse fácilmente a distintos proyectos o estructuras de aplicación.",
 
     image: "miniaturaEcom.png",
 
@@ -199,7 +199,7 @@ export const texts = {
     featuresTitle: "Funcionalidades",
 
     demo: "",
-    github: "https://github.com/ClaudioBarlassina",
+    github: "https://github.com/ClaudioBarlassina/Full-Stack-Ecommerce",
 
     features: [
       "Arquitectura Frontend y Backend desacoplada",
