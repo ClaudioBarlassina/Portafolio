@@ -104,6 +104,49 @@ export const texts = {
       "Global state management using Zustand"
     ]
   }
+},3: {
+  ferreteriaPorMayor: {
+    title: "Wholesale Hardware Store – eCommerce Demo",
+
+    label: "Demo Project",
+
+    description:
+      "Wholesale Hardware Store is a full stack eCommerce application built with a decoupled architecture between frontend and backend. The frontend, developed with React, consumes a custom API built using Node.js, Express, and MongoDB. The application allows dynamic product management, including filtering by name, brand, category, and price range. It also features user authentication with Firebase and online payment integration using Stripe. The entire system is built with reusable, fully responsive, and scalable components.",
+
+    image: "miniaturaFerreteria.png",
+
+    techTitle: "Technologies",
+
+    tech: [
+      "React",
+      "CSS",
+      "Zustand",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Firebase",
+      "Stripe"
+    ],
+
+    featuresTitle: "Features",
+
+    demo: "",
+    github: "",
+
+    features: [
+      "Decoupled Frontend and Backend architecture",
+      "REST API built with Node.js and Express",
+      "MongoDB database for product management",
+      "User authentication with Firebase",
+      "Stripe payment integration",
+      "Advanced filters by name, brand, category, and price",
+      "Real-time product search",
+      "Persistent shopping cart",
+      "Fully responsive design",
+      "Reusable and scalable components",
+      "Global state management with Zustand"
+    ]
+  }
 }
     },
   },
@@ -212,6 +255,49 @@ export const texts = {
       "Carrito de compras con persistencia",
       "Simulación de pasarela de pago propia",
       "Envío de correos con Nodemailer",
+      "Gestión de estado global con Zustand"
+    ]
+  }
+},3: {
+  ferreteriaPorMayor: {
+    title: "Ferretería Por Mayor – eCommerce Demo",
+
+    label: "Proyecto demo",
+
+    description:
+      "Ferretería Por Mayor es una aplicación eCommerce full stack desarrollada con una arquitectura desacoplada entre frontend y backend. El frontend, construido en React, consume una API propia desarrollada con Node.js, Express y MongoDB. La aplicación permite gestionar productos dinámicamente, incluyendo filtros por nombre, marca, categoría y rango de precios. Además, cuenta con autenticación de usuarios mediante Firebase y una integración de pagos online con Stripe. Todo el sistema fue construido con componentes reutilizables, completamente responsive y escalables.",
+
+    image: "miniaturaFerreteria.png",
+
+    techTitle: "Tecnologías",
+
+    tech: [
+      "React",
+      "CSS",
+      "Zustand",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Firebase",
+      "Stripe"
+    ],
+
+    featuresTitle: "Funcionalidades",
+
+    demo: "",
+    github: "",
+
+    features: [
+      "Arquitectura Frontend y Backend desacoplada",
+      "API REST con Node.js y Express",
+      "Base de datos MongoDB para gestión de productos",
+      "Autenticación de usuarios con Firebase",
+      "Integración de pagos online con Stripe",
+      "Filtros avanzados por nombre, marca, categoría y precio",
+      "Búsqueda de productos en tiempo real",
+      "Carrito de compras con persistencia",
+      "Diseño completamente responsive",
+      "Componentes reutilizables y escalables",
       "Gestión de estado global con Zustand"
     ]
   }
