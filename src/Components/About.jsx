@@ -10,6 +10,9 @@ import Reactjs from '../assets/React.png'
 import Reduxjs from '../assets/Redux.png'
 import Supabase from '../assets/Supabase.png'
 import vercel from '../assets/vercel.png'
+import mongoDB from '../assets/mongo.png'
+import firebase from '../assets/firebase.png'
+import Stripe from '../assets/stripe.png'
 import { useStore } from '../../Zustand/store'
 const About = () => {
 
@@ -91,6 +94,15 @@ const About = () => {
             </div>
             <div className="empresa" data-aos="fade-up" data-aos-delay="900">
               <img src={github} alt="" />
+            </div>
+            <div className="empresa" data-aos="fade-up" data-aos-delay="1000">
+              <img src={mongoDB} alt="" />
+            </div>
+            <div className="empresa" data-aos="fade-up" data-aos-delay="1100">
+              <img src={firebase} alt="" />
+            </div>
+            <div className="empresa" data-aos="fade-up" data-aos-delay="1200">
+              <img src={Stripe} alt="" />
             </div>
           </div>
         </div>
