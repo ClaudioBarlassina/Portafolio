@@ -267,7 +267,7 @@ export const texts = {
     description:
       "Ferretería Por Mayor es una aplicación eCommerce full stack desarrollada con una arquitectura desacoplada entre frontend y backend. El frontend, construido en React, consume una API propia desarrollada con Node.js, Express y MongoDB. La aplicación permite gestionar productos dinámicamente, incluyendo filtros por nombre, marca, categoría y rango de precios. Además, cuenta con autenticación de usuarios mediante Firebase y una integración de pagos online con Stripe. Todo el sistema fue construido con componentes reutilizables, completamente responsive y escalables.",
 
-    image: "miniaturaFerreteria.png",
+    image: "",
 
     techTitle: "Tecnologías",
 

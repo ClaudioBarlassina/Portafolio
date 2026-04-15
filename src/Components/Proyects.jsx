@@ -19,6 +19,7 @@ const Proyects = () => {
          
       <ProjectCard project={t.projects[1].ecommerce}></ProjectCard>
        <ProjectCard project={t.projects[2].moduCommerce}></ProjectCard>
+       <ProjectCard project={t.projects[3].ferreteriaPorMayor}></ProjectCard>
         </div>
       </section>
     </div>
