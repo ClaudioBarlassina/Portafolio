@@ -12,7 +12,7 @@ import Supabase from '../assets/Supabase.png'
 import vercel from '../assets/vercel.png'
 import mongoDB from '../assets/mongo.png'
 import firebase from '../assets/firebase.png'
-import Stripe from '../assets/stripe.png'
+import Stripe from '../assets/Stripe.png'
 import { useStore } from '../../Zustand/store'
 const About = () => {
 
