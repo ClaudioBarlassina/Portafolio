@@ -87,8 +87,8 @@ export const texts = {
 
     featuresTitle: "Features",
 
-    demo: "",
-    github: "https://github.com/ClaudioBarlassina",
+    demo: "https://full-stack-ecommerce-opal.vercel.app/",
+    github: "https://github.com/ClaudioBarlassina/Full-Stack-Ecommerce",
 
     features: [
       "Decoupled Frontend and Backend architecture",
@@ -113,7 +113,7 @@ export const texts = {
     description:
       "Wholesale Hardware Store is a full stack eCommerce application built with a decoupled architecture between frontend and backend. The frontend, developed with React, consumes a custom API built using Node.js, Express, and MongoDB. The application allows dynamic product management, including filtering by name, brand, category, and price range. It also features user authentication with Firebase and online payment integration using Stripe. The entire system is built with reusable, fully responsive, and scalable components.",
 
-    image: "miniaturaFerreteria.png",
+    image: "FerreteriaPorMayorMiniatura.png",
 
     techTitle: "Technologies",
 
@@ -130,8 +130,8 @@ export const texts = {
 
     featuresTitle: "Features",
 
-    demo: "",
-    github: "",
+    demo: "https://ferreteria-por-mayor-ecommerce-demo.vercel.app/",
+    github: "https://github.com/ClaudioBarlassina/FerreteriaPorMayor-Ecommerce-Demo",
 
     features: [
       "Decoupled Frontend and Backend architecture",
@@ -149,6 +149,17 @@ export const texts = {
   }
 }
     },
+    contact: {
+  title: 'Contact',
+
+  description:
+     'Results-oriented web developer who builds and manages websites and web applications that contribute to the overall success of the product. Feel free to contact me for opportunities or collaborations.',
+
+  location: 'You can find me at:',
+  email: 'Email',
+
+  cta: 'Send message',
+},
   },
   es: {
     navbar: {
@@ -218,7 +229,7 @@ export const texts = {
       },
       2: {
   moduCommerce: {
-    title: "Full Stack eCommerce Demo",
+    title: "TecnoShop eCommerce Demo",
 
     label: "Proyecto demo",
 
@@ -241,7 +252,7 @@ export const texts = {
 
     featuresTitle: "Funcionalidades",
 
-    demo: "",
+    demo: "https://full-stack-ecommerce-opal.vercel.app/",
     github: "https://github.com/ClaudioBarlassina/Full-Stack-Ecommerce",
 
     features: [
@@ -267,7 +278,7 @@ export const texts = {
     description:
       "Ferretería Por Mayor es una aplicación eCommerce full stack desarrollada con una arquitectura desacoplada entre frontend y backend. El frontend, construido en React, consume una API propia desarrollada con Node.js, Express y MongoDB. La aplicación permite gestionar productos dinámicamente, incluyendo filtros por nombre, marca, categoría y rango de precios. Además, cuenta con autenticación de usuarios mediante Firebase y una integración de pagos online con Stripe. Todo el sistema fue construido con componentes reutilizables, completamente responsive y escalables.",
 
-    image: "",
+    image: "FerreteriaPorMayorMiniatura.png",
 
     techTitle: "Tecnologías",
 
@@ -284,8 +295,8 @@ export const texts = {
 
     featuresTitle: "Funcionalidades",
 
-    demo: "",
-    github: "",
+    demo: "https://ferreteria-por-mayor-ecommerce-demo.vercel.app/",
+    github: "https://github.com/ClaudioBarlassina/FerreteriaPorMayor-Ecommerce-Demo",
 
     features: [
       "Arquitectura Frontend y Backend desacoplada",
@@ -303,5 +314,16 @@ export const texts = {
   }
 }
     },
+    contact: {
+  title: 'Contacto',
+
+  description:
+    'Desarrollador web orientado a resultados que crea y gestiona sitios y aplicaciones web que contribuyen al éxito del producto. Podés contactarme por oportunidades o colaboraciones.',
+
+  location: 'Podes Encontrarme en:',
+  email: 'Email',
+
+  cta: 'Enviar mensaje',
+},
   },
 }
