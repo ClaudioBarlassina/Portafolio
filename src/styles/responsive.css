@@ -1,33 +1,36 @@
-@media (max-width: 545px) {
-  /* 1. Navbar */
+/* ── Tablet / Mobile ── */
+@media (max-width: 768px) {
   .navbar {
-    padding: 10px;
-    height: 50px;
-    flex-direction: row;
-    justify-content: space-between;
+    padding: 10px 16px;
+    height: 56px;
   }
 
   .navbar-links {
     display: none;
   }
 
-  .icono-hambur {
-    display: flex;
-    cursor: pointer;
-    margin-right: 10px;
+  .navbar-lang {
+    margin-left: auto;
   }
 
-  /* 2. Menú desplegable (hamburguesa) */
+  .icono-hambur {
+    display: flex;
+    margin-left: 12px;
+  }
+
   .navbar-cont-desplegable {
     position: fixed;
-    top: 50px;
-    right: -100%; /* oculto por defecto */
+    top: 56px;
+    right: -100%;
     display: flex;
     flex-direction: column;
-    background-color: #1f1f1f;
-    width: 70%;
+    background: rgba(15, 12, 41, 0.95);
+    background: color-mix(in srgb, var(--bg-secondary) 95%, transparent);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    width: 75%;
     height: 100vh;
-    padding: 20px;
+    padding: 32px 24px;
     transition: right 0.3s ease-in-out;
     z-index: 999;
   }
@@ -36,53 +39,115 @@
     right: 0;
   }
 
-  /* 3. Hero section */
-  .hero {
+  .navbar-desplegable {
+    list-style: none;
+    padding: 0;
+    display: flex;
     flex-direction: column;
-    padding: 4rem 1rem;
+    gap: 20px;
   }
 
-  .imagen-hero {
-    width: 100%;
-    height: auto;
-    border-radius: 0;
+  .navbar-desplegable li a {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+  }
+  .navbar-desplegable li a:hover {
+    color: var(--accent);
   }
 
-  /* 4. Fondo roto */
-  .fondo5 {
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
+  section {
+    padding: 4rem 1.25rem;
   }
 
-  /* 5. About section */
+  section::before {
+    margin-bottom: 3.5rem;
+  }
+
+  .hero {
+    padding-top: 60px;
+    min-height: 90vh;
+  }
+
+  .hero h2 {
+    font-size: 1rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.4rem, 5vw, 2rem);
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+    margin: 16px auto;
+  }
+
   .secc-about {
     flex-direction: column;
-    gap: 20px;
+    gap: 32px;
   }
 
-  .about-sec1,
-  .about-sec2 {
+  .about-sec1 {
     width: 100%;
   }
 
-  /* 6. Contact section */
+  .about-sec2 {
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  }
+
   .conteiner-contacto {
     flex-direction: column;
-    gap: 20px;
+    gap: 24px;
+    text-align: center;
+    padding: 28px 24px;
   }
 
   .parrafo {
-    width: 100%;
-  }
-
-  /* 7. Prevención general de desborde */
-  html, body {
-    overflow-x: hidden;
     max-width: 100%;
   }
 
-  * {
-    box-sizing: border-box;
+  .seccion2-contacto {
+    width: 100%;
+  }
+
+  .projects h2,
+  .about-header h2,
+  .contact h2 {
+    font-size: 1.6rem;
+    margin-bottom: 28px;
+  }
+}
+
+/* ── Small phones ── */
+@media (max-width: 480px) {
+  section {
+    padding: 3rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.3rem, 6vw, 1.7rem);
+  }
+
+  .about-ctas {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about-ctas .enlases {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .conteiner-contacto {
+    padding: 20px 16px;
+    border-radius: var(--radius-md);
+  }
+
+  .contact-icon-link {
+    width: 46px;
+    height: 46px;
   }
 }

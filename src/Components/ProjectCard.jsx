@@ -1,42 +1,116 @@
-import styles from "./ProjectCard.module.css";
+import { useEffect, useRef } from 'react'
+import gsap from 'gsap'
+import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
+import styles from './ProjectCard.module.css'
 
 export default function ProjectCard({ project }) {
-  return (
-    <div className={styles.card}>
+  const cardRef = useRef(null)
+  const imageRef = useRef(null)
+  const techRef = useRef(null)
 
-      <div className={styles.imageContainer}>
+  useEffect(() => {
+    const card = cardRef.current
+    const image = imageRef.current
+    if (!card) return
+
+    const handleMouseEnter = () => {
+      gsap.to(card, {
+        y: -8,
+        boxShadow: '0 20px 60px rgba(100, 255, 218, 0.15)',
+        borderColor: 'rgba(100, 255, 218, 0.25)',
+        duration: 0.4,
+        ease: 'power2.out',
+      })
+      if (image) {
+        gsap.to(image, {
+          scale: 1.08,
+          duration: 0.5,
+          ease: 'power2.out',
+        })
+      }
+      // Tech badges stagger reappear on hover
+      if (techRef.current?.children) {
+        gsap.fromTo(
+          techRef.current.children,
+          { y: 6, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.2,
+            stagger: 0.03,
+            ease: 'power2.out',
+          }
+        )
+      }
+    }
+
+    const handleMouseLeave = () => {
+      gsap.to(card, {
+        y: 0,
+        boxShadow: '0 12px 40px rgba(100, 255, 218, 0.1)',
+        borderColor: 'rgba(255, 255, 255, 0.08)',
+        duration: 0.4,
+        ease: 'power2.out',
+      })
+      if (image) {
+        gsap.to(image, {
+          scale: 1,
+          duration: 0.4,
+          ease: 'power2.out',
+        })
+      }
+    }
+
+    card.addEventListener('mouseenter', handleMouseEnter)
+    card.addEventListener('mouseleave', handleMouseLeave)
+
+    return () => {
+      card.removeEventListener('mouseenter', handleMouseEnter)
+      card.removeEventListener('mouseleave', handleMouseLeave)
+    }
+  }, [])
+
+  return (
+    <div className={styles.card} ref={cardRef}>
+      <div className={styles.imageWrapper}>
+        <div className={styles.imageOverlay} />
         <img
-          src={project.image}
+          ref={imageRef}
+          src={`/${project.image}`}
           alt={project.title}
           className={styles.image}
+          loading="lazy"
         />
+        <div className={styles.imageHover}>
+          <span>View Project</span>
+        </div>
       </div>
 
       <div className={styles.content}>
-        <h2 className={styles.title}>{project.title}</h2>
-{project.label && (
-  <span className={styles.badge}>
-    {project.label}
-  </span>
-)}
+        <div className={styles.header}>
+          <h3 className={styles.title}>{project.title}</h3>
+          {project.label && (
+            <span className={styles.badge}>{project.label}</span>
+          )}
+        </div>
 
         <p className={styles.description}>{project.description}</p>
 
-        <h3>{project.techTitle}</h3>
-        <ul className={styles.tech}>
+        <div className={styles.techList} ref={techRef}>
           {project.tech.map((t, i) => (
-            <li key={i}>{t}</li>
+            <span key={i} className={styles.techItem}>{t}</span>
           ))}
-        </ul>
+        </div>
 
-        <h3>{project.featuresTitle}</h3>
-        <ul className={styles.features}>
-          {project.features.map((f, i) => (
-            <li key={i}>{f}</li>
-          ))}
-        </ul>
+        <div className={styles.featuresList}>
+          <h4 className={styles.featuresTitle}>{project.featuresTitle}</h4>
+          <ul>
+            {project.features.map((f, i) => (
+              <li key={i}>{f}</li>
+            ))}
+          </ul>
+        </div>
 
-        {/* botones */}
         <div className={styles.buttons}>
           {project.demo && (
             <a
@@ -45,10 +119,9 @@ export default function ProjectCard({ project }) {
               rel="noopener noreferrer"
               className={styles.demoBtn}
             >
-              Demo
+              <FaExternalLinkAlt size={12} /> Demo
             </a>
           )}
-
           {project.github && (
             <a
               href={project.github}
@@ -56,12 +129,11 @@ export default function ProjectCard({ project }) {
               rel="noopener noreferrer"
               className={styles.githubBtn}
             >
-              Github
+              <FaGithub size={14} /> GitHub
             </a>
           )}
         </div>
-
       </div>
     </div>
-  );
+  )
 }

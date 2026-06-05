@@ -1,113 +1,222 @@
-import React from 'react'
-import fondo2 from '../assets/fondo2c.png'
-
+import { useEffect, useRef } from 'react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import css3 from '../assets/css3.png'
 import git from '../assets/git.png'
 import html5 from '../assets/html5.png'
 import github from '../assets/GitHub.png'
-import Nodejs from '../assets/Node.js.png'
-import Reactjs from '../assets/React.png'
-import Reduxjs from '../assets/Redux.png'
-import Supabase from '../assets/Supabase.png'
+import nodejs from '../assets/Node.js.png'
+import reactjs from '../assets/React.png'
+import supabase from '../assets/Supabase.png'
 import vercel from '../assets/vercel.png'
 import mongoDB from '../assets/mongo.png'
 import firebase from '../assets/firebase.png'
-import Stripe from '../assets/Stripe.png'
+import stripe from '../assets/Stripe.png'
 import { useStore } from '../../Zustand/store'
-const About = () => {
 
-  const {t} = useStore()
+const skills = [
+  { src: reactjs, name: 'React' },
+  { src: html5, name: 'HTML5' },
+  { src: css3, name: 'CSS3' },
+  { src: nodejs, name: 'Node.js' },
+  { src: supabase, name: 'Supabase' },
+  { src: vercel, name: 'Vercel' },
+  { src: github, name: 'GitHub' },
+  { src: git, name: 'Git' },
+  { src: mongoDB, name: 'MongoDB' },
+  { src: firebase, name: 'Firebase' },
+  { src: stripe, name: 'Stripe' },
+]
+
+const About = () => {
+  const { t } = useStore()
+  const sectionRef = useRef(null)
+  const textRef = useRef(null)
+  const skillsRef = useRef(null)
+  const parallaxRef = useRef(null)
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // ── 1. PARAGRAPHS: fade-up with stagger ──
+      const paragraphs = textRef.current?.querySelectorAll('p, h3, .about-ctas')
+      if (paragraphs) {
+        gsap.fromTo(
+          paragraphs,
+          { opacity: 0, y: 30 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.5,
+            stagger: 0.15,
+            ease: 'power2.out',
+            scrollTrigger: {
+              trigger: textRef.current,
+              start: 'top 85%',
+              toggleActions: 'play none none none',
+            },
+          }
+        )
+      }
+
+      // ── 2. SKILLS: random direction stagger ──
+      const skillItems = skillsRef.current?.children
+      if (skillItems) {
+        Array.from(skillItems).forEach((item) => {
+          const directions = [
+            { x: -60, y: 0 },   // left
+            { x: 60, y: 0 },    // right
+            { x: 0, y: -50 },   // top
+            { x: 0, y: 50 },    // bottom
+            { x: -40, y: -40 }, // top-left
+            { x: 40, y: -40 },  // top-right
+            { x: -40, y: 40 },  // bottom-left
+            { x: 40, y: 40 },   // bottom-right
+          ]
+          const dir = directions[Math.floor(Math.random() * directions.length)]
+          const rot = (Math.random() - 0.5) * 40
+
+          gsap.fromTo(
+            item,
+            {
+              x: dir.x,
+              y: dir.y,
+              opacity: 0,
+              scale: 0.6,
+              rotate: rot,
+            },
+            {
+              x: 0,
+              y: 0,
+              opacity: 1,
+              scale: 1,
+              rotate: 0,
+              duration: 0.7,
+              ease: 'back.out(1.7)',
+              scrollTrigger: {
+                trigger: skillsRef.current,
+                start: 'top 85%',
+                toggleActions: 'play none none none',
+              },
+            }
+          )
+        })
+      }
+
+      // ── 3. Subtle parallax on the background layer ──
+      if (parallaxRef.current) {
+        gsap.to(parallaxRef.current, {
+          y: -40,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: 1.5,
+          },
+        })
+      }
+
+      // ── 4. Section entry reveal (scene change gradient) ──
+      gsap.fromTo(
+        sectionRef.current,
+        { opacity: 0.6 },
+        {
+          opacity: 1,
+          duration: 1.2,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 90%',
+            toggleActions: 'play none none none',
+          },
+        }
+      )
+    }, sectionRef)
+
+    // ── GSAP hover effects for skill items ──
+    const skillItems = skillsRef.current?.children
+    const hoverCleanups = []
+
+    if (skillItems) {
+      Array.from(skillItems).forEach((item) => {
+        const img = item.querySelector('img')
+
+        const onEnter = () => {
+          gsap.to(item, {
+            boxShadow: '0 14px 36px rgba(100, 255, 218, 0.18)',
+            duration: 0.3,
+            ease: 'power2.out',
+          })
+          if (img) {
+            gsap.to(img, {
+              rotate: '10deg',
+              scale: 1.2,
+              duration: 0.35,
+              ease: 'back.out(2)',
+            })
+          }
+        }
+
+        const onLeave = () => {
+          gsap.to(item, {
+            boxShadow: '0 0 0 rgba(100, 255, 218, 0)',
+            duration: 0.3,
+            ease: 'power2.out',
+          })
+          if (img) {
+            gsap.to(img, {
+              rotate: '0deg',
+              scale: 1,
+              duration: 0.3,
+              ease: 'power2.out',
+            })
+          }
+        }
+
+        item.addEventListener('mouseenter', onEnter)
+        item.addEventListener('mouseleave', onLeave)
+        hoverCleanups.push(() => {
+          item.removeEventListener('mouseenter', onEnter)
+          item.removeEventListener('mouseleave', onLeave)
+        })
+      })
+    }
+
+    return () => {
+      ctx.revert()
+      hoverCleanups.forEach((fn) => fn())
+    }
+  }, [])
 
   return (
-    <div>
-      <section id="about" className="about  "data-aos="fade-up">
-        <div className="presen">
-          <img src={fondo2} alt="" />
-          <h2 data-aos="fade-up" data-aos-delay="200">
-            {/* Sobre mí */}
-            {t.about.title}
-          </h2>
-          <p data-aos="fade-up" data-aos-delay="200">
-            {/* Aquí encontrarás más información sobre mí, lo que hago y mis
-            habilidades actuales principalmente en términos de programación y
-            tecnología. */}
-            {t.about.intro}
-          </p>
-        </div>
-        <div className="secc-about">
-          <div className="about-sec1">
-            <h1 data-aos="zoom-in" data-aos-delay="200">{t.about.subtitle}</h1>
-            <div className="conoceme-about">
-              <p data-aos="fade-right" data-aos-delay="200" >
-                {/* Soy Desarrollador Web Full-Stack con experiencia en la creación
-                y gestión del frontend de sitios y aplicaciones web, enfocado en
-                contribuir al éxito del producto final mediante soluciones
-                funcionales, accesibles y atractivas.{' '} */}
-                {t.about.description1}
-              </p>
-
-              <p  data-aos="fade-right" data-aos-delay="300">
-                {/* En mis tiempos libres, me dedico a perfeccionar mis habilidades
-                aprendiendo las últimas tecnologías y desarrollando aplicaciones
-                orientadas a resolver necesidades reales. */}
-                {t.about.description2}
-              </p>
-
-              <p  data-aos="fade-right" data-aos-delay="400">
-                {/* Podés consultar algunos de mis trabajos en la sección Proyectos. */}
-                {t.about.description3}
-              </p>
-
-              <p  data-aos="fade-right" data-aos-delay="500">
-                {' '}
-                {/* Estoy abierto a oportunidades laborales donde pueda aportar
-                valor, seguir creciendo profesionalmente y formar parte de
-                equipos que compartan la pasión por la tecnología y la
-                innovación. */}
-                {t.about.opportunities}
-              </p>
-              <a href="#contact" data-aos="zoom-in" data-aos-delay="700" className='enlases'> {t.about.ctaContact}</a>
-              {/* <button  data-aos="flip-left" data-aos-delay="700" onClick="#contact" className='enlases'>CONTACTO</button> */}
-            </div>
-          </div>
-          <div className="about-sec2">
-            <div className="empresa" data-aos="fade-up" data-aos-delay="200">
-              <img src={Reactjs} alt="" />
-            </div>
-            {/* <div className="empresa" data-aos="fade-up" data-aos-delay="300">
-              <img src={Reduxjs} alt="" />
-            </div> */}
-            <div className="empresa" data-aos="fade-up" data-aos-delay="400">
-              <img src={html5} alt="" />
-            </div>
-            <div className="empresa" data-aos="fade-up" data-aos-delay="500">
-              <img src={css3} alt="" />
-            </div>
-            <div className="empresa" data-aos="fade-up" data-aos-delay="600">
-              <img src={Nodejs} alt="" />
-            </div>
-            <div className="empresa" data-aos="fade-up" data-aos-delay="700">
-              <img src={Supabase} alt="" />
-            </div>
-            <div className="empresa" data-aos="fade-up" data-aos-delay="800">
-              <img src={vercel} alt="" />
-            </div>
-            <div className="empresa" data-aos="fade-up" data-aos-delay="900">
-              <img src={github} alt="" />
-            </div>
-            <div className="empresa" data-aos="fade-up" data-aos-delay="1000">
-              <img src={mongoDB} alt="" />
-            </div>
-            <div className="empresa" data-aos="fade-up" data-aos-delay="1100">
-              <img src={firebase} alt="" />
-            </div>
-            <div className="empresa" data-aos="fade-up" data-aos-delay="1200">
-              <img src={Stripe} alt="" />
-            </div>
+    <section id="about" className="about" ref={sectionRef}>
+      <div ref={parallaxRef} className="about-parallax-bg" />
+      <div className="about-header">
+        <h2>{t.about.title}</h2>
+        <p className="about-intro">{t.about.intro}</p>
+      </div>
+      <div className="secc-about">
+        <div className="about-sec1" ref={textRef}>
+          <h3>{t.about.subtitle}</h3>
+          <p>{t.about.description1}</p>
+          <p>{t.about.description2}</p>
+          <p>{t.about.description3}</p>
+          <p>{t.about.opportunities}</p>
+          <div className="about-ctas">
+            <a href="#contact" className="enlases">{t.about.ctaContact}</a>
+            <a href="#projects" className="enlases enlases-outline">{t.about.ctaProjects}</a>
           </div>
         </div>
-      </section>
-    </div>
+        <div className="about-sec2" ref={skillsRef}>
+          {skills.map((skill, i) => (
+            <div className="skill-item" key={i}>
+              <img src={skill.src} alt={skill.name} />
+              <span className="skill-name">{skill.name}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   )
 }
 
