@@ -11,10 +11,10 @@ const Proyects = () => {
   const cardsRef = useRef(null)
 
   const projects = [
-    t.projects[1].ecommerce,
-    t.projects[2].moduCommerce,
+    t.projects[1].cvManager,
+    t.projects[2].ecommerce,
     t.projects[3].ferreteriaPorMayor,
-    t.projects[4].cvManager,
+    t.projects[4].moduCommerce,
   ]
 
   useEffect(() => {
