@@ -15,6 +15,7 @@ const Proyects = () => {
     t.projects[2].ecommerce,
     t.projects[3].ferreteriaPorMayor,
     t.projects[4].moduCommerce,
+    t.projects[5].liveTv,
   ]
 
   useEffect(() => {
